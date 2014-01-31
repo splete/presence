@@ -1,0 +1,25 @@
+insert into matiere values ('12_m2miagefa_qsi','QSI Qualité des Systèmes d\'Information',2012,0,'M2MIAGEFA');
+insert into matiere values ('12_m2miagefa_cgest','CGEST Contrôle de Gestion',2012,0,'M2MIAGEFA');
+insert into matiere values ('12_m2miagefa_mproj','MPROJ Management de Projet',2012,0,'M2MIAGEFA');
+insert into matiere values ('12_m2miagefa_ntsi','NTSI Nouvelles Technologies et Systèmes d\'Informations',2012,0,'M2MIAGEFA');
+insert into matiere values ('12_m2miagefa_gla','GLA Génie Logiciel Avance',2012,0,'M2MIAGEFA');
+
+insert into matiere values ('12_m2miagefa_pepit','PEPIT Projet d\'Ensemble des Pratiques Informatiques Transversales',2012,0,'M2MIAGEFA');
+insert into matiere values ('12_m2miagefa_cara','CARA Conception d\'Applications Réparties Avancées',2012,0,'M2MIAGEFA');
+insert into matiere values ('12_m2miagefa_ang3','ANG3 Anglais',2012,0,'M2MIAGEFA');
+insert into matiere values ('12_m2miagefa_ql','QL Qualité Logiciel',2012,0,'M2MIAGEFA');
+
+insert into matiere values ('12_m2miagefa_mssi','MSSI Management de la Sécurité des Systèmes d\'Information',2012,0,'M2MIAGEFA');
+
+insert into matiere values ('12_m2miagefa_coma','COMA COmmunication et MAnagement',2012,0,'M2MIAGEFA');
+
+insert into matiere values ('12_m2miagefa_odeva','ODEVA Outils de DEVeloppement d\'Applications ',2012,0,'M2MIAGEFA');
+
+
+insert into matiere values ('12_m2miagefa_orfac','ORFAC Organisation de la Rentrée en FA/FC',2012,0,'M2MIAGEFA');
+
+update `fil_presences`.matiere set obsolete=1 where anneeReference=2011 and matierecle like '%m2miage%'
+
+
+
+

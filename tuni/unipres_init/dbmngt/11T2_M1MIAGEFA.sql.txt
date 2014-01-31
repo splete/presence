@@ -1,0 +1,23 @@
+insert into matiere values ('11_m1miagefa_ro','RO',2011,0,'M1MIAGEFA');
+insert into matiere values ('11_m1miagefa_cp','CP',2011,0,'M1MIAGEFA');
+insert into matiere values ('11_m1miagefa_dnt','DNT',2011,0,'M1MIAGEFA');
+insert into matiere values ('11_m1miagefa_gp','GP',2011,0,'M1MIAGEFA');
+insert into matiere values ('11_m1miagefa_pxml','GLA',2011,0,'M1MIAGEFA');
+
+
+insert into intervention values ('11_m1miagefa_ro_ctd','ctd','11_m1miagefa_ro','03:00:00',2011);
+insert into intervention values ('11_m1miagefa_cp_ctd','ctd','11_m1miagefa_cp','02:00:00',2011);
+insert into intervention values ('11_m1miagefa_dnt_ctd','ctd','11_m1miagefa_dnt','03:00:00',2011);
+insert into intervention values ('11_m1miagefa_gp_ctd','ctd','11_m1miagefa_gp','03:00:00',2011);
+insert into intervention values ('11_m1miagefa_pxml_ctd','ctd','11_m1miagefa_pxml','03:00:00',2011);
+
+
+
+insert into seance values ('11_m1miagefa_ro_ctd_gr1','11_m1miagefa_ro_ctd','melab',1,'09:00:00','M1MIAGEFA1','M5A2-M5B13','11T2');
+insert into seance values ('11_m1miagefa_cp_ctd_gr1','11_m1miagefa_cp_ctd','ext_szczygiel',1,'13:30:00','M1MIAGEFA1','M5A2-M5B13','11T2');
+insert into seance values ('11_m1miagefa_dnt_ctd_gr1','11_m1miagefa_dnt_ctd','ext_lefranc',1,'15:45:00','M1MIAGEFA1','M5A2-M5B13','11T2');
+insert into seance values ('11_m1miagefa_gp_ctd_gr1','11_m1miagefa_gp_ctd','ext_gardin',2,'09:00:00','M1MIAGEFA1','M5A2-M5B13','11T2');
+insert into seance values ('11_m1miagefa_pxml_ctd_gr1','11_m1miagefa_pxml_ctd','roos',2,'13:30:00','M1MIAGEFA1','M5A2-M5B13','11T2');
+
+
+

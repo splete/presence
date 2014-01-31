@@ -1,0 +1,13 @@
+xxaeaxx;Algorithmes et applications
+xxcarxx;Conception d'Applications Réparties
+xxbdaxx;Bases de Données Avancées
+xxihmxx;Interaction Homme Machine
+xxsvlxx;Spécification et validation du logiciel
+xxcalpxx;Concepts avancés des langages de programmation
+xxfddxx;Fouille de données
+xxhecixx;Histoire et épistémiologie du calcul et de l'informatique
+xxm3dsxx;Modélisation 3D et synthèse
+xxpacxx;Principes et algorithmes crypthographiques
+xxppdxx;Programmation parallèle et distribuée
+xxrdfxx;Reconnaissance de formes
+xxtixx;Traitement d'images

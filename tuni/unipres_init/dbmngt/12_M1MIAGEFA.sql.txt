@@ -1,0 +1,41 @@
+insert into matiere values ('12_m1miagefa_bda','BDA Base de Données Avancées',2012,0,'M1MIAGEFA');
+insert into matiere values ('12_m1miagefa_UML','UML Analyse Objet avec UML',2012,0,'M1MIAGEFA');
+insert into matiere values ('12_m1miagefa_id','ID Informatique Décisionnelle',2012,0,'M1MIAGEFA');
+insert into matiere values ('12_m1miagefa_clo','CLO Conception de Logiciels Objets',2012,0,'M1MIAGEFA');
+
+insert into matiere values ('12_m1miagefa_abd','ABD Administration Bases de Données',2012,0,'M1MIAGEFA');
+insert into matiere values ('12_m1miagefa_ang2','ANG2 Anglais',2012,0,'M1MIAGEFA');
+insert into matiere values ('12_m1miagefa_car','CAR Conception d'Applications Reparties',2012,0,'M1MIAGEFA');
+insert into matiere values ('12_m1miagefa_proj','PROJ Projet',2012,0,'M1MIAGEFA');
+insert into matiere values ('12_m1miagefa_ro','RO Recherche Opérationnelle',2012,0,'M1MIAGEFA');
+insert into matiere values ('12_m1miagefa_cp','CP Conduite de Projets',2012,0,'M1MIAGEFA');
+
+
+-----
+
+
+
+
+insert into matiere values ('12_m1miagefa_ro','RO Recherche Opérationnelle',2012,0,'M1MIAGEFA');
+insert into matiere values ('12_m1miagefa_cp','CP Conduite de Projets',2012,0,'M1MIAGEFA');
+insert into matiere values ('12_m1miagefa_dnt','DNT Droit des Nouvelles Technologies',2012,0,'M1MIAGEFA');
+insert into matiere values ('12_m1miagefa_gp','GP Gestion de Production',2012,0,'M1MIAGEFA');
+insert into matiere values ('12_m1miagefa_gla','GLA',2012,0,'M1MIAGEFA');
+
+
+
+insert into matiere values ('12_m1miagefa_manid','MANID Mise à Niveau Informatique Décisionnelle',2012,0,'M1MIAGEFA');
+
+insert into matiere values ('12_m1miagefa_odeva','ODEVA Outils de DEVeloppement d\'Applications ',2012,0,'M1MIAGEFA');
+
+
+insert into matiere values ('12_m1miagefa_orfac','ORFAC Organisation de la Rentrée en FA/FC',2012,0,'M1MIAGEFA');
+
+
+
+insert into matiere values ('12_m1miagefa_digest','DIGEST Découverte et Introduction à la Gestion',2012,0,'M1MIAGEFA');
+
+update `fil_presences`.matiere set obsolete=1 where anneeReference=2011 and matierecle like '%m2miage%'
+
+
+

@@ -1,0 +1,13 @@
+insert into `fil_presences`.`matiere` values ('12_m2mocadfa_sv','Sciences du Vivant SV',2012,0,'M2MOCADFA');
+insert into `fil_presences`.`matiere` values ('12_m2mocadfa_ei','Extraction d\'Information EI',2012,0,'M2MOCADFA');
+insert into `fil_presences`.`matiere` values ('12_m2mocadfa_di','Décision dans l\'Incertain DI',2012,0,'M2MOCADFA');
+insert into `fil_presences`.`matiere` values ('12_m2mocadfa_sci','Simulation Centrée Individus SCI',2012,0,'M2MOCADFA');
+insert into `fil_presences`.`matiere` values ('12_m2mocadfa_oc','Optimisation Combinatoire OC',2012,0,'M2MOCADFA');
+insert into `fil_presences`.`matiere` values ('12_m2mocadfa_exam','Examen',2012,0,'M2MOCADFA');
+insert into `fil_presences`.`matiere` values ('12_m2mocadfa_amphi','Amphi',2012,0,'M2MOCADFA');
+insert into `fil_presences`.`matiere` values ('12_m2mocadfa_visite','Visite',2012,0,'M2MOCADFA');
+insert into `fil_presences`.`matiere` values ('12_m2mocadfa_rentree','Rentrée',2012,0,'M2MOCADFA');
+insert into `fil_presences`.`matiere` values ('12_m2mocadfa_angcom','Anglais Comm',2012,0,'M2MOCADFA');
+insert into `fil_presences`.`matiere` values ('12_m2mocadfa_journee','Journée',2012,0,'M2MOCADFA');
+
+update `fil_presences`.matiere set obsolete=1 where anneeReference=2011 and matierecle like '%mocad%'

@@ -1,0 +1,40 @@
+delete from matiere where formationRef like 'M2IAGLFA' where anneeReference=2012;
+
+insert into matiere values ('12_m2iaglfa_ang','Anglais Communication',2012,0,'M2IAGLFA');
+insert into matiere values ('12_m2iaglfa_comm','Communication Anglais',2012,0,'M2IAGLFA');
+insert into matiere values ('12_m2iaglfa_archi','Architecture Logicielle',2012,0,'M2IAGLFA');
+insert into matiere values ('12_m2iaglfa_cagl','CAGL Concepts Avancés de Genie Logiciel',2012,0,'M2IAGLFA');
+insert into matiere values ('12_m2iaglfa_conf','Conférences',2012,0,'M2IAGLFA');
+insert into matiere values ('12_m2iaglfa_conf','Conférences',2012,0,'M2IAGLFA');
+insert into matiere values ('12_m2iaglfa_glproj','GL - Suivi de projet',2012,0,'M2IAGLFA');
+insert into matiere values ('12_m2iaglfa_gl','Génie Logiciel',2012,0,'M2IAGLFA');
+insert into matiere values ('12_m2iaglfa_ia','IA - Singularité technologique',2012,0,'M2IAGLFA');
+insert into matiere values ('12_m2iaglfa_ifi','IFI',2012,0,'M2IAGLFA');
+insert into matiere values ('12_m2iaglfa_iir','IIR',2012,0,'M2IAGLFA');
+insert into matiere values ('12_m2iaglfa_jeux','Jeux d''entreprise',2012,0,'M2IAGLFA');
+insert into matiere values ('12_m2iaglfa_journee','Journée',2012,0,'M2IAGLFA');
+insert into matiere values ('12_m2iaglfa_rh','[Pass'Pro] Entretien RH',2012,0,'M2IAGLFA');
+insert into matiere values ('12_m2iaglfa_pl','Programmation Logique',2012,0,'M2IAGLFA');
+insert into matiere values ('12_m2iaglfa_proj','Projet',2012,0,'M2IAGLFA');
+insert into matiere values ('12_m2iaglfa_sma','Systèmes Multi-Agents',2012,0,'M2IAGLFA');
+insert into matiere values ('12_m2iaglfa_sout','Soutenance',2012,0,'M2IAGLFA');
+insert into matiere values ('12_m2iaglfa_reunion','Réunion',2012,0,'M2IAGLFA');
+
+update `fil_presences`.matiere set obsolete=1 where anneeReference=2011 and matierecle like '%iagl%'
+
+--
+
+Séparer les créneaux en parallele
+Commencer chaque créneau par Abreviation - Type Seance - GR? 
+Les alternants sont en GP1? GP2?
+
+Même UE?
+Ergonomie Cognitive
+Software Product Line
+Singularité
+Jeux d'entreprise
+
+Conférences - Séance de 2012-12-01 en double
+
+changer grps pour étudiants IAGL
+

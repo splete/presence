@@ -1,0 +1,17 @@
+delete from matiere where formationRef like 'M2TIIRFA' where anneeReference=2012;
+
+insert into matiere values ('12_m2tiirfa_ang','Technique Expression/Anglais/PFE',2012,0,'M2TIIRFA');
+insert into matiere values ('12_m2tiirfa_ifi','IFI Infrastructures et Frameworks Internet',2012,0,'M2TIIRFA');
+insert into matiere values ('12_m2tiirfa_iir','IIR Initiation à l\'Innovation et la Recherche',2012,0,'M2TIIRFA');
+insert into matiere values ('12_m2tiirfa_sout','Soutenances',2012,0,'M2TIIRFA');
+insert into matiere values ('12_m2tiirfa_jeu','Jeu d''entreprise',2012,0,'M2TIIRFA');
+insert into matiere values ('12_m2tiirfa_journee','Journée',2012,0,'M2TIIRFA');
+
+insert into matiere values ('12_m2tiirfa_atr','ATR Architectures et Technologies des Réseaux',2012,0,'M2TIIRFA');
+insert into matiere values ('12_m2tiirfa_usd','USD Systèmes Distribués',2012,0,'M2TIIRFA');
+insert into matiere values ('12_m2tiirfa_srs','SRS Sécurité des Réseaux et des Systèmes',2012,0,'M2TIIRFA');
+
+
+update `fil_presences`.matiere set obsolete=1 where anneeReference=2011 and matierecle like '%tiir%'
+
+--

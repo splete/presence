@@ -1,0 +1,19 @@
+delete from matiere where formationRef like 'M2MOCADFA';
+insert into matiere values ('11_m2mocadfa_ei1','Extraction d'Information EI1',2011,0,'M2MOCADFA');
+insert into matiere values ('11_m2mocadfa_ei2','Extraction d'Information EI2',2011,0,'M2MOCADFA');
+insert into matiere values ('11_m2mocadfa_sv0','Sciences du Vivant SV0',2011,0,'M2MOCADFA');
+insert into matiere values ('11_m2mocadfa_sv1','Sciences du Vivant SV1',2011,0,'M2MOCADFA');
+insert into matiere values ('11_m2mocadfa_sv2','Sciences du Vivant SV2',2011,0,'M2MOCADFA');
+insert into matiere values ('11_m2mocadfa_sv3','Sciences du Vivant SV3',2011,0,'M2MOCADFA');
+insert into matiere values ('11_m2mocadfa_di','Décision dans l'Incertain DI',2011,0,'M2MOCADFA');
+insert into matiere values ('11_m2mocadfa_di2','Décision dans l'Incertain DI2',2011,0,'M2MOCADFA');
+insert into matiere values ('11_m2mocadfa_oc','Optimisation Combinatoire OC',2011,0,'M2MOCADFA');
+insert into matiere values ('11_m2mocadfa_sci','Simulation Centrée Individus SCI',2011,0,'M2MOCADFA');
+insert into matiere values ('11_m2mocadfa_ric','RIC',2011,0,'M2MOCADFA');
+insert into matiere values ('11_m2mocadfa_riciir','RIC/IIR',2011,0,'M2MOCADFA');
+insert into matiere values ('11_m2mocadfa_ang','Anglais/Com',2011,0,'M2MOCADFA');
+insert into matiere values ('11_m2mocadfa_jeu','Jeu d''entreprise',2011,0,'M2MOCADFA');
+
+--
+
+Anglais/Com de jeudi matin à enlever

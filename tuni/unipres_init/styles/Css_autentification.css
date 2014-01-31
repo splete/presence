@@ -1,0 +1,182 @@
+﻿@charset "utf-8";
+
+/* CSS Document */
+
+body {
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	margin: 0px 0px 0px 0px;
+	padding: 0;
+	height: 100%;
+	color:#666;		 
+}
+
+html {
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	margin: 0px 0px 0px 0px;
+	padding: 0;
+	height: 100%;
+	color:#666;		 
+}
+
+body {	 
+	color:#ffffff; background-color:#000000;background-image:url(../images/fond.jpg);background-repeat:repeat-x;font-size:11px;
+	margin: 0px 0px 0px 0px;line-height: 1.27;font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;}
+
+.displayblock {display:block;}
+img { border:0px;  text-decoration: none;}	
+
+#acces_direct {display:none;}
+
+#conteneur_global {width:884px;height:600px;margin:0 auto;font-size:11px;}
+
+#bandeau_haut{
+margin:0px;padding:0px;height:225px;background-image:url(../images/bandeau_haut02.jpg);background-repeat:no-repeat;clear:both;}
+
+#bienvenue{margin:0px;padding:0px;background-image:url(../images/bienvenue2.jpg);background-repeat:no-repeat;
+
+height:230px;
+width:431px;
+float:left;
+}
+#bienvenue h1{
+margin:0px;
+padding:25px 0px 0px 112px;
+color:#ffffff;
+font-size:21px;
+font-weight:normal;
+}
+#bienvenue p{
+margin:0px;
+padding:30px 0px 0px 112px;
+color:#ffffff;
+font-size:12px;
+text-align:justify;
+width:281px;
+}
+
+#liseret{margin:0px;padding:0px;height:202px;width:58px;background-image:url(../images/lisere.jpg);float:left;}
+
+
+#liseret_haut{margin:0px 0px 0px 0px;background-image:url(../images/liseret_haut.jpg);background-repeat:no-repeat;
+padding:0px;height:30px;display:block;width:323px;}
+
+#zone_formulaire{
+    background-image:url(../images/connexion.jpg);background-repeat:no-repeat;background-color:#1678b9;
+margin:0px;padding:0px;width:323px;}
+
+#zone_erreur{
+margin:0px;
+padding:20px 10px 5px 20px;
+width:290px;
+text-align:left;
+color:#ffd800;
+font-size:14px;
+}
+
+#zone_ok{
+margin:0px;
+padding:20px 10px 5px 20px;
+width:290px;
+text-align:left;
+color:#ffffff;
+font-size:14px;
+}
+
+#liseret_erreur{background-image:url(../images/liseret_erreur2.jpg);background-repeat:no-repeat;margin:0px;
+padding:0px;height:3px;width:323px;display:block;}
+
+#zone_probleme{
+margin:0px;
+padding:0px;
+width:377px;
+height:74px;
+}
+
+#zone_probleme h1{
+margin:0px;
+padding:15px 0px 0px 0px;
+color:#ffffff;
+font-size:16px;
+font-weight:normal;
+
+}
+#zone_probleme p{
+margin:0px;
+padding:0px 0px 0px 0px;
+color:#ffffff;
+font-size:12px;
+text-align:justify;
+width:328px;
+}
+
+#zone_probleme a{
+color:#ffffff;
+text-decoration:underline;
+}
+
+a {
+color:#ffffff;
+text-decoration:underline;
+}
+
+a:visited {
+color:#ffffff;
+text-decoration:underline;
+}
+
+#zone_probleme a:hover{
+text-decoration:none;
+}
+
+#securite{
+margin:0px;
+padding:20px 0px 0px 112px;
+color:#666666;
+font-size:11px;
+text-align:justify;
+clear:left;
+width:704px;
+}
+
+#copyright{
+margin:0px;
+padding:5px 0px 0px 112px;
+color:#ffffff;
+font-size:10px;
+}
+
+#copyright a{
+color:#ffffff;
+text-decoration:none;
+}
+#copyright a:hover{
+color:#dddddd;
+}
+
+form{
+padding:0px 0px 10px 0px;
+margin:0px 0px 0px 0px;
+color:#ffffff;
+font-size:12px;
+text-align:left;
+}
+
+table {
+    color:#ffffff;
+}
+
+.bordure{
+margin:6px 0px 0px 0px;
+padding:0px;
+border: 1px #CAC9C8 solid;
+width:147px;
+}
+
+.envoi{
+background-image:url(../images/bouton3.jpg);background-repeat:no-repeat;padding:0 0 3px 2px;border:medium none;height:20px;
+cursor: pointer;
+margin:6px 0px 0px 0px;width:73px;}
+
+label{
+text-align:right;
+}

@@ -1,0 +1,8 @@
+insert into `fil_presences`.`matiere` values ('12_m1infofa_aac','AAC Algorithmique Avancée, Complexité, Calculabilité',2012,0,'M1INFOFA');
+insert into `fil_presences`.`matiere` values ('12_m1infofa_aev','AEV',2012,0,'M1INFOFA');
+insert into `fil_presences`.`matiere` values ('12_m1infofa_ang','ANG Anglais',2012,0,'M1INFOFA');
+insert into `fil_presences`.`matiere` values ('12_m1infofa_ase','ASE Architecture et conception des systèmes d'exploitation',2012,0,'M1INFOFA');
+insert into `fil_presences`.`matiere` values ('12_m1infofa_cao','CAO Conception Objet Avancée',2012,0,'M1INFOFA');
+insert into `fil_presences`.`matiere` values ('12_m1infofa_rentree','Rentrée',2012,0,'M1INFOFA');
+
+--update `fil_presences`.matiere set obsolete=1 where anneeReference=2011 and matierecle like '%mocad%'

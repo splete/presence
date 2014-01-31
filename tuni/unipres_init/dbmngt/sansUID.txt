@@ -1,0 +1,3 @@
+select groupeRef,nom,prenom, mail,mailLille1,annee from etudiant inner join etudiant_groupe on etudCle=etudRef
+and groupeRef like '%FA1' where
+(etudRef like 'm2%' or etudRef like 'miage%' or etudRef like 'm1%') and annee=2012 order by groupeRef ;

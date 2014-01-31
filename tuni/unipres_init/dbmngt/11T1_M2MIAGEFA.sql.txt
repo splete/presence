@@ -1,0 +1,23 @@
+insert into matiere values ('11_m2miagefa_qsi','QSI',2011,0,'M2MIAGEFA');
+insert into matiere values ('11_m2miagefa_cgest','CGEST',2011,0,'M2MIAGEFA');
+insert into matiere values ('11_m2miagefa_mproj','MPROJ',2011,0,'M2MIAGEFA');
+insert into matiere values ('11_m2miagefa_ntsi','NTSI',2011,0,'M2MIAGEFA');
+insert into matiere values ('11_m2miagefa_gla','GLA',2011,0,'M2MIAGEFA');
+
+update intervention set anneeReference='2011' where 1;
+insert into intervention values ('11_m2miagefa_qsi_ctd','ctd','11_m2miagefa_qsi','03:00:00',2011);
+insert into intervention values ('11_m2miagefa_cgest_ctd','ctd','11_m2miagefa_cgest','02:00:00',2011);
+insert into intervention values ('11_m2miagefa_mproj_ctd','ctd','11_m2miagefa_mproj','03:00:00',2011);
+insert into intervention values ('11_m2miagefa_ntsi_ctd','ctd','11_m2miagefa_ntsi','04:00:00',2011);
+insert into intervention values ('11_m2miagefa_gla_ctd','ctd','11_m2miagefa_gla','04:00:00',2011);
+
+
+
+insert into seance values ('11_m2miagefa_qsi_ctd_gr1','11_m2miagefa_qsi_ctd','ext_haessle',1,'09:00:00','M2MIAGEFA1','M5A2-M5B13','11T1');
+insert into seance values ('11_m2miagefa_cgest_ctd_gr1','11_m2miagefa_cgest_ctd','ext_lavigne',1,'13:30:00','M2MIAGEFA1','M5A2-M5B13','11T1');
+insert into seance values ('11_m2miagefa_mproj_ctd_gr1','11_m2miagefa_mproj_ctd','ext_stalin',1,'15:45:00','M2MIAGEFA1','M5A2-M5B13','11T1');
+insert into seance values ('11_m2miagefa_ntsi_ctd_gr1','11_m2miagefa_ntsi_ctd','ext_nogues',2,'08:30:00','M2MIAGEFA1','M5A2-M5B13','11T1');
+insert into seance values ('11_m2miagefa_gla_ctd_gr1','11_m2miagefa_gla_ctd','rouillar',2,'13:30:00','M2MIAGEFA1','M5A2-M5B13','11T1');
+
+
+

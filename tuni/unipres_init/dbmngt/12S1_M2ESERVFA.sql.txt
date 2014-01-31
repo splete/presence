@@ -1,0 +1,37 @@
+use `fil_presences`;
+delete from matiere where formationRef like 'M2ESERVFA' and anneeReference=2012;
+
+insert into matiere values ('12_m2eservfa_ang','Anglais',2012,0,'M2ESERVFA');
+insert into matiere values ('12_m2eservfa_com','Communication',2012,0,'M2ESERVFA');
+insert into matiere values ('12_m2eservfa_conf','Conférence',2012,0,'M2ESERVFA');
+
+insert into matiere values ('12_m2eservfa_ecle_sir','ECLE - SIR',2012,0,'M2ESERVFA');
+insert into matiere values ('12_m2eservfa_ecle_gp','ECLE - GP',2012,0,'M2ESERVFA');
+insert into matiere values ('12_m2eservfa_ecle_ma','ECLE - MA',2012,0,'M2ESERVFA');
+insert into matiere values ('12_m2eservfa_ecle_ni','ECLE - NI',2012,0,'M2ESERVFA');
+insert into matiere values ('12_m2eservfa_ecle_droit','ECLE - NI',2012,0,'M2ESERVFA');
+
+insert into matiere values ('12_m2eservfa_glihm','GLIHM',2012,0,'M2ESERVFA');
+insert into matiere values ('12_m2eservfa_glihm_odeva','ODEVA',2012,0,'M2ESERVFA');
+
+insert into matiere values ('12_m2eservfa_ifi_web','IFI - Applications Web',2012,0,'M2ESERVFA');
+insert into matiere values ('12_m2eservfa_ifi_jee','IFI - Java EE',2012,0,'M2ESERVFA');
+insert into matiere values ('12_m2eservfa_ifi_net','IFI - .NET',2012,0,'M2ESERVFA');
+
+insert into matiere values ('12_m2eservfa_iir','IIR',2012,0,'M2ESERVFA');
+
+insert into matiere values ('12_m2eservfa_jeu',"Jeu d'entreprise",2012,0,'M2ESERVFA');
+
+insert into matiere values ('12_m2eservfa_journee',"Journée",2012,0,'M2ESERVFA');
+
+insert into matiere values ('12_m2eservfa_rentree',"Rentrée",2012,0,'M2ESERVFA');
+
+insert into matiere values ('12_m2eservfa_sout',"Soutenance",2012,0,'M2ESERVFA');
+
+insert into matiere values ('12_m2eservfa_twa_vxml','TWA - VoiceXML',2012,0,'M2ESERVFA');
+insert into matiere values ('12_m2eservfa_twa_html5','TWA - HTML5',2012,0,'M2ESERVFA');
+insert into matiere values ('12_m2eservfa_twa_android','TWA - Android',2012,0,'M2ESERVFA');
+insert into matiere values ('12_m2eservfa_twa_iv','TWA - Image/vidéo',2012,0,'M2ESERVFA');
+insert into matiere values ('12_m2eservfa_twa_wa','TWA - Web avancé',2012,0,'M2ESERVFA');
+
+update `fil_presences`.matiere set obsolete=1 where anneeReference=2011 and matierecle like '%eserv%'

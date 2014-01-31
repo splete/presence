@@ -1,0 +1,1030 @@
+@charset "utf-8";
+
+/******************************************
+ * feuille de style pour le site de
+ * présentation des formations info du FIL
+ * media : screen
+ * version aout 2007
+ ******************************************/
+
+html,body {
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	margin: 0px 0px 0px 0px;
+	padding: 0;
+	height: 100%;
+	color:#000000;
+}
+
+
+body{
+    background-color: white ;
+    background-image:url(http://fil.univ-lille1.fr/digitalAssets/1/1778_Background.jpg);
+    background-repeat:repeat-x;
+    margin: 0px 0px 0px 0px;
+    padding:0;
+	font-size:12px;
+    line-height: 1.27;
+}
+
+
+
+#principal{
+  width : 810px ;
+	min-height:100%;
+	background-image:url(http://fil.univ-lille1.fr/digitalAssets/1/1708_background_content.png);
+	background-repeat:repeat-y;
+	min-height:100%;
+  margin:0px auto;
+	position:relative;
+}
+
+
+
+
+
+.contenu{
+padding:0px 3px;
+width: 774px;
+background-color:white;
+margin: 0 15px;
+text-align:justify;
+}
+
+.flottantdroit {
+padding-left:5px;
+float:right;
+width:300px;
+}
+
+ .dessous {
+clear : both;
+}
+
+b {
+color:#FF5A00;
+}
+
+.contenu h1,.contenu h2,.contenu h3, .contenu h4{
+color:#00525A;
+}
+
+h1 {
+font-size:24px;
+}
+
+h2 {
+font-size:20px;
+}
+
+h3 {
+font-size:16px;
+}
+
+h4 {
+font-size:14px;
+}
+
+
+
+.contenu h1:first-letter,.contenu h2:first-letter,.contenu h3:first-letter,.contenu h4:first-letter{
+color:#FF5A00;
+}
+
+.contenu  ul
+{
+list-style-type: none;
+padding: 0px;
+padding-left:10px;
+margin: 10px;
+}
+
+.contenu ul li
+{
+background-image: url(http://fil.univ-lille1.fr/digitalAssets/5/5889_puces_orage_OKBIS.gif);
+background-repeat: no-repeat;
+background-position: 0px 7px;
+padding-left: 5px;
+}
+
+.contenu ul ul li
+{
+background-image: url(http://fil.univ-lille1.fr/digitalAssets/5/5892_puces_vert_OKBIS.gif);
+background-repeat: no-repeat;
+background-position: 0px 7px;
+padding-left: 10 px;
+}
+
+span.mot {padding: 0 2%}
+
+
+
+
+
+*.remarque{
+font-style:italic;
+}
+
+/** LIENS **/
+/** pour le menu des UE **/
+
+.contenu a{
+font-weight:normal;
+text-decoration:none;
+}
+
+
+.contenu a:link{
+color:navy;
+font-weight:bold;
+background-color:transparent;
+}
+.contenu a:visited{
+color:#036;
+font-weight:bold;
+background-color:transparent;
+}
+.contenu a:hover{
+border-style:dotted none;
+border-top-width:0px;
+border-bottom-width:1px;
+border-color:#FF5A00;
+}
+
+
+
+.contenu a.fichier:link{
+color:maroon;
+font-weight:bold;
+background-color:transparent;
+}
+.contenu a.fichier:visited{
+color:maroon;
+background-color:transparent;
+}
+.contenu a.fichier:hover{
+border-color:maroon;
+}
+
+
+/** RETOUR **/
+div.retour, div.signature {
+font-style:italic;
+font-size:small;
+text-align:right;
+font-size:9px;
+}
+div.retour a:link{
+text-decoration:none;
+font-weight:normal;
+}
+div.signature{
+width: 768px;
+color:#CCCCCC;
+}
+
+
+span.tiny{
+font-size:3px;
+  }
+
+
+/** contenu-item2 **/
+div.contenu-item2.on {
+	display: block;
+}
+div.contenu-item2.off {
+	display: none;
+}
+
+div.contenu-item2{
+/* padding:5px 5px 10px 5px;*/
+background-color:white;
+}
+
+.contenu-item2 h1, .contenu-item2 h2, .contenu-item2 h3, .contenu-item2 h4 {
+color:#00525A;
+}
+
+.contenu-item2 h1:first-letter, .contenu-item2
+h2:first-letter,.contenu-item2 h3:first-letter, .contenu-item2 h4:first-letter{
+color:#FF5A00;
+}
+
+.contenu-item2  ul
+{
+list-style-type: none;
+padding: 0;
+padding-left: 10px;
+margin: 0;
+}
+
+.contenu-item2  ul li
+{
+background-image:  url(http://fil.univ-lille1.fr/digitalAssets/5/5889_puces_orage_OKBIS.gif);
+background-repeat: no-repeat;
+/*background-position: 1em .6em;*/
+padding-left: 12px;
+}
+
+.contenu-item2  ul ul li
+{
+background-image: url(http://fil.univ-lille1.fr/digitalAssets/5/5892_puces_vert_OKBIS.gif);
+background-repeat: no-repeat;
+/*background-position: 1em .6em;*/
+padding-left: 10px ;
+}
+
+.contenu-item2 a{
+font-weight:normal;
+text-decoration:none;
+}
+
+.contenu-item2 a:link{
+color:navy;
+font-weight:bold;
+background-color:transparent;
+}
+
+.contenu-item2 a:visited{
+color:#036;
+font-weight:bold;
+background-color:transparent;
+}
+
+.contenu-item2 a:hover{
+border-style:dotted none;
+border-top-width:0px;
+border-bottom-width:1px;
+border-color:#036;
+}
+
+
+/** fin contenu-item2 **/
+
+
+
+
+
+/*
+.menuligne, .contenu{
+clear:both;
+}
+*/
+
+#menuligne {
+	 height:25px;
+	 width:780px;
+	 top:143px;
+	 z-index:1;
+	 background-color:#FFFFFF;
+	 position:absolute;
+}
+
+
+
+
+
+/*.menuligne {
+margin: 0 15px;
+width:780px;
+background-color:#CCCCCC;
+font-size:18px;
+}
+*/
+
+/*
+.menuligne  .agauche, .menuligne .adroite {
+background-color:#CCCCCC;
+font-size:18px;
+}
+.menuligne a{
+font-size:18px;
+}
+
+
+.menuligne a  {
+text-decoration:none;
+color:#00525A;
+font-weight:normal;
+}
+
+.menuligne a:hover  {
+color:#00828A;
+text-decoration:none;
+}
+*/
+
+.menuligne2 a.highlight, .menuligne3 a.highlight, .menuligne4 a.highlight {
+color:#FF5A00;
+}
+
+.menuligne2 {
+margin: 0 15px;
+width:770px;
+padding-left:10px;
+border-top: solid;
+border-color:#999999;
+border-width:2px;
+background-color:#DDDDDD;
+font-size:16px;
+font-weight:bold;
+color:#00525A;
+}
+.menuligne2 a {
+font-size:16px;
+text-decoration:none;
+font-weight:normal;
+color:#00525A;
+}
+
+.menuligne2 a:hover {
+color:#00828A;
+}
+
+ .agauche{
+float:left;
+/*padding-left:10px;*/
+}
+ .adroite{
+float:right;
+padding-right:10px;
+text-align:right;
+}
+
+
+/***************/
+/** menuligne3  **/
+/***************/
+.menuligne3 {
+padding-left:15px;
+width:765px;
+background-color:#EEEEEE;
+font-size:14px;
+}
+
+ .menuligne4 {
+font-size:12px;
+width:755px;
+padding-left:25px;
+background-color:#FFFFFF;
+border-bottom: solid;
+}
+.menuligne3, .menuligne4 {
+margin: 0 15px;
+border-top: solid;
+border-color:#AAAAAA;
+border-width:1px;
+font-weight:bold;
+color:black;
+}
+.menuligne3 a {
+font-size:14px;
+}
+.menuligne3 a, .menuligne4 a {
+text-decoration:none;
+font-weight:normal;
+color:#00525A;
+}
+
+
+.menuligne4 a {
+font-size:14px;
+padding:0px 4px;
+font-style:italic;
+}
+.menuligne3 a:hover, .menuligne4 a:hover {
+color:#00828A;
+}
+
+
+
+
+/** menuinterne2 **/
+ .menuinterne2 {
+padding-top:0px;
+}
+
+
+div.menuitem2 {
+background-color:#00525A;
+color:white;
+padding:1px 1px 0px 1px;
+margin:1px;
+display:inline;
+border: 1px solid #00525A;
+}
+
+
+
+.menuitem2 a {
+background-color:#00525A;
+color:white;
+text-decoration:none;
+}
+
+
+
+
+.menuitem2 a:visited {
+color:white;
+}
+
+
+div.menuitem2-current{
+color:#FF5A00;
+background-color:white;
+padding:1px 1px 0px 1px;
+margin:1px;
+border-top:1px solid #CCCCCC;
+border-right:1px solid #CCCCCC;
+border-left:1px solid #CCCCCC;
+border-bottom:1px solid white;
+display:inline;
+}
+
+
+
+div.contenu-item2{
+
+border: 1px solid #CCCCCC;
+padding: 0px 3px;
+/*
+padding:5px 5px 10px 5px;
+margin:5px 5px 0px 5px;
+border: 1px solid #00525A;
+background-color:white;
+*/
+}
+
+.menuitem2 a:visited {
+color:white;
+}
+
+.menuitem2 a {
+color:white;
+}
+
+.menuitem2 a:hover {
+color:#FF5A00;
+text-decoration:none;
+}
+
+
+div.menuitem2-current a:visited , div.menuitem2-current a:link  {
+background-color:transparent;
+color:#FF5A00;
+text-decoration:none;
+}
+
+div.menuitem2 a:visited {
+background-color:transparent;
+text-decoration:none;
+}
+
+.menuinterne2 {
+padding-left: 25px;
+text-align: left;
+}
+
+div.contenu-item2.on {
+	display: block;
+}
+div.contenu-item2.off {
+	display: none;
+}
+
+
+
+
+
+/** TABLE : edt et semainier **/
+*.semainier,*.edt{
+padding:10px;
+}
+
+
+table.table{
+border-color:#00525A;
+border-width:1px;
+border-style:solid;
+margin:5px auto;
+}
+
+/**
+td{
+border:thin none;
+border-style:solid none;
+}
+**/
+
+tr{
+color:black;
+border-color:#FF6600;
+border:none;
+}
+
+tr.entete{
+background-color:#FF6600;
+color:white;
+text-align:center;
+border-color:navy;
+border-style:solid;
+border-width:1px;
+font-weight:bold;
+}
+
+tr.cours{
+background-color:#B3B3B3;
+}
+
+tr.pair,tr.TD,tr.CTD{
+background-color:#ADDBE7;
+}
+
+tr.impair,tr.TP{
+background-color:#EEFFFF;
+}
+
+tr.libre{
+background-color:#F0F0F0;
+}
+
+td.seance{
+font-weight:bold;
+}
+
+/* pour la rubrique évaluation */
+p.FORMULE {
+font-size:14px;
+border-width:1px;
+border-style:solid;
+border-color:#0000ca;
+padding:30px;
+background-color:white;
+text-align:center;
+color:red;
+margin-left:30%;
+margin-right:30%;}
+
+
+*.NOTE {color:red}
+
+/***/
+*.light{
+    color:#666666;
+}
+*.xlight{
+    color:#999999;
+}
+/****NON TROUVE****/
+div.nontrouve {
+background-image:url("../logos/travaux.png");
+background-repeat:no-repeat;
+background-position:left;
+/*
+border-width:1px;
+border-style:solid;
+border-color:#00525A;
+*/
+
+height:3cm;
+
+padding:25px;
+margin:25px;
+
+text-align:right;
+font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+font-weight:bold;
+font-size:16pt;
+color:#FF5A00;
+}
+
+
+/************* ACCES SITE LILLE1 *****************/
+
+#acces {
+       font-size:11px;
+	background-color:#000000;
+	background-image:url(http://fil.univ-lille1.fr/digitalAssets/1/1777_BackgroundTop.jpg);
+	background-repeat:repeat-x;
+	height:30px;
+	width:100%;
+        min-width: 600px;
+}
+
+#acces_direct {
+	float:left;
+	margin:5px 0 0 5px;
+	font-size:9px;
+	height:17px;
+        width:240px;
+}
+
+#acces DIV {
+	width:100%;
+        height:25px;
+}
+
+#acces IMG {
+	margin:0 0 0 20px;
+	float:left;
+}
+
+#acces P {
+	margin: 4px 0 0 5px;
+        padding-top: 3px;
+	color:#FFFFFF;
+	float:left;
+}
+
+#acces INPUT {
+	float:left;
+	background:none;
+	border:none;
+	color:#FFFFFF;
+	padding:4px 0 0 2px;
+	font-weight:bold;
+	cursor:pointer;
+}
+
+#acces INPUT:HOVER {
+	color:#e5e5e5;
+}
+
+div#englobe_acces {
+	width: 480px;
+	height: 28px;
+	float: right;
+        margin-right:10px;
+}
+
+
+
+
+/*** ALERT ***/
+
+*.alert{
+font-weight:bold;
+background-color:white;
+color:red;
+}
+*.alert:before {
+content:url(../logos/warning.gif);
+}
+
+/*******************/
+/*** ajout fil.univ-lille1.fr ***/
+/*******************/
+/*** TOP ***/
+#main_top {
+	top:0 ;
+	width: 780px;
+	height:225px;
+	margin: 0 15px;
+}
+
+#top {
+	 background-image:url(http://fil.univ-lille1.fr/digitalAssets/5/5947_topNew.jpg);
+	 background-repeat:no-repeat;
+	 height:115px;
+	 width:780px;
+}
+
+
+#top IMG{
+     /*margin:10px 0 0 38px;*/
+	float:left;
+}
+
+
+#zone-logo{
+    height: 86px; /* 80*/
+    position:absolute;
+    left: 53px;
+    margin-top: 7px;
+    width: 420px;   /*391*/
+}
+
+img {
+   border: none;
+}
+.bandeau{
+	 background-image:url(Bandeau-Photo-Portail-2.jpg);
+	 background-repeat:no-repeat;
+	 height:85px;
+	 width:780px;
+	 position:absolute;
+	 top:140px;
+}
+
+
+
+
+#zone1{
+     height:80px;
+     width: 214px;
+     float:left;
+     margin:0px;
+     padding:0px;
+}
+
+/*******************/
+/* MENU HORIZONTAL */
+/*******************/
+#menu {
+	 height:25px;
+	 width:780px;
+	 top:115px;
+	 z-index:1;
+	 background-color:#FFFFFF;
+	 position:absolute;
+}
+
+
+#home A{
+	 height:14px;
+	 width:14px;
+	 float:left;
+	 margin:8px 8px 2px 10px;
+}
+
+#home A{
+	 background-image:url(http://fil.univ-lille1.fr/digitalAssets/1/1744_Home.jpg);
+	 background-repeat:no-repeat;
+}
+
+#home A:HOVER{
+	 background-image:url(http://fil.univ-lille1.fr/digitalAssets/1/1745_HomeOver.jpg);
+	 background-repeat:no-repeat;
+}
+
+#nav .menuHorizontal A:HOVER{
+	color:#fb8700;
+}
+
+#nav .menuHorizontal {
+	background-image:url(http://fil.univ-lille1.fr/digitalAssets/3/3074_puce_formation.jpg);
+	background-repeat:no-repeat;
+}
+
+#nav .menuHorizontal ul{
+	border-left:3px solid #F98200;
+}
+
+#nav {
+	float: right;
+	width: 747px;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	font-size:16px;
+	background-color:#FFFFFF;
+	top:0;
+	text-align:left;
+}
+
+#nav ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	font-size:16px;
+	float:left;
+	width:133px;
+	border-right:1px solid #D9D9D9;
+}
+
+#nav a {
+	display: block;
+	color: #00525A;
+	text-decoration: none;
+	padding:3px 4px 0 4px;
+	margin:0 6px;
+}
+
+#nav li {
+	float: left;
+	padding: 0;
+}
+
+#nav li:hover, #nav li:focus{
+	overflow:hidden;
+}
+
+#nav li span.highlight {
+	display: block;
+	padding:3px 4px 0 4px;
+	margin:0 6px;
+        cursor:default;
+}
+
+#nav li ul {
+	position: absolute;
+	left: -999em;
+	height: auto;
+	font-weight: normal;
+	margin: 0;
+}
+
+#nav li li {
+	padding-right: 1em;
+}
+
+#nav li ul a {
+	background-color:#FFFFFF;
+	font-size:11px;
+	border-bottom: #D9D9D9 1px solid;
+	line-height:18px;
+	width:133px;
+
+}
+
+#nav li ul span.highlight {
+	font-size:11px;
+	border-bottom: #D9D9D9 1px solid;
+	line-height:18px;
+        width:133px;
+}
+
+#nav li ul {
+	background-color:#FFFFFF;
+	font-size:11px;
+	line-height:18px;
+
+}
+
+#nav li ul ul {
+	margin: -1.75em 0 0 14em;
+}
+
+#nav li:hover ul ul, #nav li:hover ul ul ul,
+#nav li.sfhover ul ul, #nav li.sfhover ul ul ul,
+#nav li:focus ul ul, #nav li:focus ul ul ul,
+#nav li.sffocus ul ul, #nav li.sffocus ul ul ul {
+	left: -999em;
+}
+
+#nav li:hover ul, #nav li li:hover ul, #nav li li li:hover ul,
+#nav li.sfhover ul, #nav li li.sfhover ul, #nav li li li.sfhover ul,
+#nav li:focus ul, #nav li li:focus ul, #nav li li li:focus ul,
+#nav li.sffocus ul, #nav li li.sffocus ul, #nav li li li.sffocus ul {
+
+	left: auto;
+}
+
+#nav li:hover,#nav li:focus, #nav li.sfhover {}
+
+#nav a.highlight, #left a.highlight {
+	color:#fb8700;
+}
+
+/*BANDEAU IMAGE */
+#bandeau {
+	 background-image:url(http://fil.univ-lille1.fr/digitalAssets/5/5748_bandeau_yann.jpg);
+	 background-repeat:no-repeat;
+	 height:170px;
+	 width:780px;
+	 position:absolute;
+	 top:140px;
+}
+
+/**************/
+/*** FIN TOP***/
+/**************/
+
+/**************/
+/* FILET ARIANE*/
+/**************/
+
+#ariane {
+	 height:18px;
+	 width:780px;
+	 font-size:10px;
+	 margin:2px 10px 0 10px;
+	 padding-left: 10px;
+}
+
+#ariane A{
+	color:#fb8700;
+	text-decoration:none;
+}
+
+#ariane A:HOVER{
+	text-decoration:underline;
+
+}
+
+/*******/
+/* BAS  */
+/*******/
+
+#footer{
+	background-image:url(http://fil.univ-lille1.fr/digitalAssets/5/5743_footer_780_IEEA.jpg);
+	background-color: #fb8700;
+	background-repeat:no-repeat;
+	bottom: 0;
+	width: 780px;
+	height:154px;
+	margin: 0 15px;
+	font-size:10px;
+	position:static;
+	clear:both;
+}
+
+#footer P{
+	 /*margin:0px;*/
+	 color:#FFFFFF;
+         /*padding: 0 px;*/
+}
+
+#footer A{
+	 color:#FFFFFF;
+	 text-decoration:none;
+}
+
+
+#footer A:HOVER{
+	/* color:#F98200;*/
+
+         text-decoration:underline;
+}
+
+#zone-logo-bas {
+     width:170px;
+     height: 66px;
+     padding:56px 0px 0px 95px;
+     float:left;
+     margin:0px;
+}
+#zone-titre-bas{
+     float:left;
+     height: 66px;
+     width: 238px;
+     padding:56px 0px 0px 0px;
+     color: #ffffff;
+     font-size:12px;
+     margin:0px;
+
+    /* padding: 20px 0px 0px 0px; */
+}
+
+#zone-texte-bas1{
+
+    float:left;
+    color: #ffffff;
+    padding: 96px 0px 0px 40px;
+    margin: 0px;    /* margin:56px 0px 0px 0px; height: 44px;*/
+    width: 235px;
+}
+#zone-texte-bas2 {
+    float: left;
+    width: 730px;
+   /* height: 15px;*/
+    margin:0px;
+    padding : 0px 0px 0px 42px;
+}
+
+#zone-titre-bas p,#zone-texte-bas1 p{
+   padding: 0px 0px 0px 0px;
+   margin:0 0 0 0px;
+   color:#FFFFFF;
+}
+
+#zone-texte-bas2 p{
+    padding: 0px 0 0 14px;
+    margin:15px 0 0 0px;
+    color:#FFFFFF;
+}
+
+
+/****** ACCESSIBILITE ******/
+
+#centre-accessibilite{
+       width: 780px;
+       margin-left: auto;
+       margin-right: auto;
+}
+#zone-accessibilite ul{
+       float:right;
+       padding:5px 23px 0px 0px;
+       margin:0;
+       font-size:11px;
+}
+
+
+#zone-accessibilite li{
+       margin:0;
+       padding:0;
+       float:left;
+       list-style-type:none;
+       list-style-image:none;
+}
+
+#zone-accessibilite li a{
+       color:#00525A;
+       text-decoration: none;
+}
+
+#zone-accessibilite li a:hover{
+       text-decoration:underline;
+}
+

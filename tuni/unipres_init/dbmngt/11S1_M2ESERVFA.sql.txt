@@ -1,0 +1,52 @@
+delete from matiere where formationRef like 'M2ESERVFA';
+insert into matiere values ('11_m2eservfa_ifi','IFI',2011,0,'M2ESERVFA');
+insert into matiere values ('11_m2eservfa_twa_vxml','TWA VoiceXML',2011,0,'M2ESERVFA');
+insert into matiere values ('11_m2eservfa_twa_xml','TWA XML',2011,0,'M2ESERVFA');
+insert into matiere values ('11_m2eservfa_twa_flash','TWA Flash',2011,0,'M2ESERVFA');
+insert into matiere values ('11_m2eservfa_twa_wa','TWA Web Avancé',2011,0,'M2ESERVFA');
+insert into matiere values ('11_m2eservfa_glihm','GLIHM',2011,0,'M2ESERVFA');
+insert into matiere values ('11_m2eservfa_glihm_android','GLIHM Android',2011,0,'M2ESERVFA');
+insert into matiere values ('11_m2eservfa_iir','IIR',2011,0,'M2ESERVFA');
+insert into matiere values ('11_m2eservfa_ric','RIC',2011,0,'M2ESERVFA');
+insert into matiere values ('11_m2eservfa_ni','NI',2011,0,'M2ESERVFA');
+insert into matiere values ('11_m2eservfa_angcomm','Anglais/Comm - Gr 1/2',2011,0,'M2ESERVFA');
+insert into matiere values ('11_m2eservfa_ecle_sir','ECLE SIR',2011,0,'M2ESERVFA');
+insert into matiere values ('11_m2eservfa_ecle_gp','ECLE GP',2011,0,'M2ESERVFA');
+insert into matiere values ('11_m2eservfa_ecle_ma','ECLE MA',2011,0,'M2ESERVFA');
+
+insert into intervention values ('11_m2eservfa_ifi_ctd','ctd','11_m2eservfa_ifi','04:15:00',2011);
+insert into seance values ('11_m2eservfa_ifi_ctd_gr1','11_m2eservfa_ifi_ctd','',1,'08:15:00','M2ESERVFA1','','11S1');
+
+
+insert into matiere values ('11_m2eservfa_angcomm','Anglais/Comm',2011,0,'M2ESERVFA');
+insert into intervention values ('11_m2eservfa_angcomm_ctd','ctd','11_m2eservfa_angcomm','04:15:00',2011);
+insert into seance values ('11_m2eservfa_sir_ctd_gr1','11_m2eservfa_sir_ctd','',1,'13:30:00','M2ESERVFA1','','11S1');
+-- fin le 24 octobre
+
+
+insert into matiere values ('11_m2eservfa_twa_vxml','TWAVoiceXML',2011,0,'M2ESERVFA');
+insert into intervention values ('11_m2eservfa_vxml_ctd','ctd','11_m2eservfa_vxml','04:15:00',2011);
+insert into seance values ('11_m2eservfa_cgest_ctd_gr1','11_m2eservfa_cgest_ctd','',2,'8:15:00','M2ESERVFA1','','11S1');
+insert into seance values ('11_m2eservfa_cgest_ctd_gr1','11_m2eservfa_cgest_ctd','',3,'8:15:00','M2ESERVFA1','','11S1');
+
+
+insert into matiere values ('11_m2eservfa_glimh','NTSI',2011,0,'M2ESERVFA');
+insert into matiere values ('11_m2eservfa_gla','GLA',2011,0,'M2ESERVFA');
+
+
+insert into intervention values ('11_m2eservfa_cgest_ctd','ctd','11_m2eservfa_cgest','02:00:00',2011);
+insert into intervention values ('11_m2eservfa_mproj_ctd','ctd','11_m2eservfa_mproj','03:00:00',2011);
+insert into intervention values ('11_m2eservfa_ntsi_ctd','ctd','11_m2eservfa_ntsi','04:00:00',2011);
+insert into intervention values ('11_m2eservfa_gla_ctd','ctd','11_m2eservfa_gla','04:00:00',2011);
+
+
+
+
+
+insert into seance values ('11_m2eservfa_cgest_ctd_gr1','11_m2eservfa_cgest_ctd','ext_lavigne',1,'13:30:00','M2ESERVFA1','M5A2-M5B13','11T1');
+insert into seance values ('11_m2eservfa_mproj_ctd_gr1','11_m2eservfa_mproj_ctd','ext_stalin',1,'15:45:00','M2ESERVFA1','M5A2-M5B13','11T1');
+insert into seance values ('11_m2eservfa_ntsi_ctd_gr1','11_m2eservfa_ntsi_ctd','ext_nogues',2,'08:30:00','M2ESERVFA1','M5A2-M5B13','11T1');
+insert into seance values ('11_m2eservfa_gla_ctd_gr1','11_m2eservfa_gla_ctd','rouillar',2,'13:30:00','M2ESERVFA1','M5A2-M5B13','11T1');
+
+
+

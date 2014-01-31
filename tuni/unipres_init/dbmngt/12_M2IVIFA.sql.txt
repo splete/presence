@@ -1,0 +1,12 @@
+insert into `fil_presences`.`matiere` values ('12_m2ivifa_iir','Initiation à l\'Innovation et la Recherche',2012,0,'M2IVIFA');
+insert into `fil_presences`.`matiere` values ('12_m2ivifa_fitg','FITG',2012,0,'M2IVIFA');
+insert into `fil_presences`.`matiere` values ('12_m2ivifa_journee','Journée',2012,0,'M2IVIFA');
+insert into `fil_presences`.`matiere` values ('12_m2ivifa_m3da','M3DA Modélisation 3D Avancée',2012,0,'M2IVIFA');
+insert into `fil_presences`.`matiere` values ('12_m2ivifa_m3ds','M3DS Modélisation 3D et Synthèse d\'Images MaN',2012,0,'M2IVIFA');
+insert into `fil_presences`.`matiere` values ('12_m2ivifa_rentree','Rentrée',2012,0,'M2IVIFA');
+insert into `fil_presences`.`matiere` values ('12_m2ivifa_rvi','RVI Réalité Virtuelle et Interaction',2012,0,'M2IVIFA');
+insert into `fil_presences`.`matiere` values ('12_m2ivifa_sci','SCI Simulations Centrées Individus',2012,0,'M2IVIFA');
+insert into `fil_presences`.`matiere` values ('12_m2ivifa_soutenances','Soutenances',2012,0,'M2IVIFA');
+insert into `fil_presences`.`matiere` values ('12_m2ivifa_angcom','Anglais/Comm/PJs',2012,0,'M2IVIFA');
+insert into `fil_presences`.`matiere` values ('12_m2ivifa_test','Test',2012,0,'M2IVIFA');
+insert into `fil_presences`.`matiere` values ('12_m2ivifa_visa','VisA Vision Artificielle',2012,0,'M2IVIFA');

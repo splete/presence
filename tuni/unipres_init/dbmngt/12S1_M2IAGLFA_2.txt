@@ -1,0 +1,33 @@
+delete from matiere where formationRef like 'M2IAGLFA';
+insert into matiere values ('11_m2iaglfa_ifi','IFI',2011,0,'M2IAGLFA');
+insert into matiere values ('11_m2iaglfa_iir','IIR',2011,0,'M2IAGLFA');
+insert into matiere values ('11_m2iaglfa_gla','Genie Logiciel Agile',2011,0,'M2IAGLFA');
+insert into matiere values ('11_m2iaglfa_pl','PL',2011,0,'M2IAGLFA');
+insert into matiere values ('11_m2iaglfa_cagl','CAGL Concepts Avancés de Genie Logiciel',2011,0,'M2IAGLFA');
+insert into matiere values ('11_m2iaglfa_sma','SMA',2011,0,'M2IAGLFA');
+insert into matiere values ('11_m2iaglfa_mngt','Management projet',2011,0,'M2IAGLFA');
+insert into matiere values ('11_m2iaglfa_conf','Conférences',2011,0,'M2IAGLFA');
+insert into matiere values ('11_m2iaglfa_ang','Anglais Gp 1',2011,0,'M2IAGLFA');
+insert into matiere values ('11_m2iaglfa_comm','Comm Gp 1',2011,0,'M2IAGLFA');
+insert into matiere values ('11_m2iaglfa_ergo','Ergonomie Cognitive',2011,0,'M2IAGLFA');
+insert into matiere values ('11_m2iaglfa_sing','Singularité',2011,0,'M2IAGLFA');
+insert into matiere values ('11_m2iaglfa_spl','Software Product Line',2011,0,'M2IAGLFA');
+insert into matiere values ('11_m2iaglfa_jeux','Jeux d''entreprise',2011,0,'M2IAGLFA');
+insert into matiere values ('11_m2iaglfa_ecle_ma','ECLE MA',2011,0,'M2IAGLFA');
+
+--
+
+Séparer les créneaux en parallele
+Commencer chaque créneau par Abreviation - Type Seance - GR? 
+Les alternants sont en GP1? GP2?
+
+Même UE?
+Ergonomie Cognitive
+Software Product Line
+Singularité
+Jeux d'entreprise
+
+Conférences - Séance de 2011-12-01 en double
+
+changer grps pour étudiants IAGL
+
