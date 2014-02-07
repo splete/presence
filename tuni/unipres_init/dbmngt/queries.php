@@ -275,4 +275,11 @@ function getEtudInfos($conn,$etudRef,$anneeRef=null){
   return $res;
 }
 
+function doQueryGetFAFormations($conn) {
+  $queryString = "SELECT formationCle 
+                  FROM formation
+                  WHERE right(nom, 2) LIKE 'FA' ";
+  $result = mysql_query($queryString);
+  return $result;
+}
 ?>

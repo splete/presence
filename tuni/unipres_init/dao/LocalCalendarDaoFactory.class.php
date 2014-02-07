@@ -90,7 +90,7 @@ class LocalCalendarDaoFactory {
                               createCatalogueEtud
                               ($conn, $formationRef, $anneeRef,$etudRef);
 
-
+      print("../seances2/$formationRef/$anneeRef/$mois/");
      if (!file_exists("../seances2/$formationRef/$anneeRef/$mois/"))
       die("<h2 style='color:red'>Demandez à Marius.Bilasco@lifl.fr de mettre à jour les informations concernant le mois (
           $mois) sélectionné!</h2>");

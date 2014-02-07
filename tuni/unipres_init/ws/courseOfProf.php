@@ -1,74 +1,102 @@
-<html>
-    <head>
-        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link href="../styles/Css_autentification.css" rel="stylesheet" type="text/css" />
-        <SCRIPT src="../js/toogleDivs.js" lang="javascript"></SCRIPT>
-        <title>Liste presences</title>
-    </head>
-  <body>
-
 <?php
 
-/*
-en POST : 
-Login + date = liste des cours du prof a cette date
-Login = cours en cours
-*/
 
 require_once "../dbmngt/connect.php";
-require_once "../dbmngt/queries.php";
+require_once '../dbmngt/queries.php';
 
 date_default_timezone_set('Europe/Paris');
+header('Content-type: application/json');
+
 
 $prof = $_GET['prof'];
-if (strlen($prof) < 1) 
-	die('Param requis');
+//$prof = $_POST['prof'];
+if (strlen($prof) < 1) {
+	$cours = array();
+	$cours["status"] = "0";
+	$cours['prof'] = "undefined";
+	$cours['date'] = "";
+	$cours['cours'] = array();
+	print(json_encode($cours));
+	die();
+}
+
+$date = $_GET['date'];
+//$date = $_POST['date'];
+if (strlen($date) < 1) {
+	$cours = array();
+	$cours["status"] = "0";
+	$cours['prof'] = $prof;
+	$cours['date'] = "undefined";
+	$cours['cours'] = array();
+	print(json_encode($cours));
+	die();
+}
+
 
 $conn=doConnection();
 
-
-$queryString = "SELECT * FROM seance WHERE profRef LIKE '" . $prof . "' ";
-//print($queryString);
-$results=mysql_query($queryString,$conn);
-
-print('<table>');
-while($result = mysql_fetch_assoc($results)){
-	print('<tr>');
-	print(
-		'<td>' . $result['seanceCle'] . '</td>' . 
-		'<td>' . $result['intervention_ref'] . '</td>' . 
-		'<td>' . $result['profRef'] . '</td>' . 
-		'<td>' . $result['jour'] . '</td>' . 
-		'<td>' . $result['debut'] . '</td>'
-	);
-	print('</tr>');
-} 
-print('</table>');
-die('Fin');
+$formations = doQueryGetFAFormations($conn);
 
 
-$results=doQueryListeEtudiantsParGroupe($conn,$groupeRef,  getCurrYear());
+$dateSplit = split("-", $date);
+$moisRef = intval($dateSplit[1]);
+$anneeRef = intval($dateSplit[0]);
 
-$result=mysql_fetch_row($results);
-
-
-$etudsNoms=array();
-$etudsPrenoms=array();
-while ($result) {
-	$etuds[]=array($result[0],$result[1],$result[2]);
-	if (strcmp($result[0],$etudRef)==0) {
-		$etudNom=$result[1];
-		$etudPrenom=$result[2];
-	}
-	$etudsNoms[]=$result[1];
-	$etudsPrenoms[]=$result[2];
-	//error_log("processing $result[0] ");
-	$result=mysql_fetch_row($results);
+if ($moisRef < 9) {
+	$moisRef = $moisRef+12;
+	$anneeRef = $anneeRef-1;
 }
 
-$prof = "bilasco"; // A recuperé en POST
+
+
+$json = array();
+$json["status"] = "1";
+$json["prof"] = $prof;
+$json["date"] = $date;
+$json["cours"] = array();
+
+while($formation = mysql_fetch_array($formations, MYSQL_ASSOC)['formationCle']) {
+
+	$folder = "../seances2/$formation/$anneeRef/$moisRef/";
+	if (!file_exists($folder))
+		continue;
+
+	$seanceFiles=scandir($folder);
+
+	for ($i=0;$i<count($seanceFiles);$i++) {
+
+		$seanceFileName=$seanceFiles[$i];
+		$infos=explode("_",$seanceFileName);
+
+		if ($seanceFileName[0]=='.') 
+			continue;
+
+		
+		$chaineSplit = split(" ", $seanceFileName);
+
+		$profFound = $chaineSplit[count($chaineSplit)-1];
+        
+        if ((strtolower($profFound) == $prof) && strpos($seanceFileName, $date) !== false) {
+        	$cours = array();
+
+        	$cours["formation"] = $formation;
+
+        	$splitWithUnder = split("_", $seanceFileName);
+
+			$cours["matiere"] = $splitWithUnder[3];
+			$cours["libelle_matiere"] = $splitWithUnder[4];
+
+			
+			$cours["heure_debut"] = $splitWithUnder[1];
+			$cours["heure_fin"] = $splitWithUnder[2];
+
+			$json["cours"][] = $cours;
+        }
+
+	}
+}
+
+print(json_encode($json));
 
 ?>
 
-</body>
-</html>
