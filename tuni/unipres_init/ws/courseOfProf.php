@@ -8,8 +8,8 @@ date_default_timezone_set('Europe/Paris');
 header('Content-type: application/json');
 
 
-$prof = $_GET['prof'];
-//$prof = $_POST['prof'];
+//$prof = $_GET['prof'];
+$prof = $_POST['prof'];
 if (strlen($prof) < 1) {
 	$cours = array();
 	$cours["status"] = "0";
@@ -20,8 +20,8 @@ if (strlen($prof) < 1) {
 	die();
 }
 
-$date = $_GET['date'];
-//$date = $_POST['date'];
+//$date = $_GET['date'];
+$date = $_POST['date'];
 if (strlen($date) < 1) {
 	$cours = array();
 	$cours["status"] = "0";
