@@ -11,7 +11,8 @@ $available_services = array (
 	"presencefac" => "g5z8h6svaz4g8wcl7861"
 );
 
-$formation = $_GET['formation'];
+// $formation = $_GET['formation'];
+$formation = $_POST['formation'];
 if (strlen($formation) < 5) {
 	$stud = array();
 	$stud["status"] = "0";
@@ -22,7 +23,8 @@ if (strlen($formation) < 5) {
 	die();
 }
 
-$date = $_GET['date'];
+// $date = $_GET['date'];
+$date = $_POST['date'];
 if (strlen($date) < 10) {
 	$stud = array();
 	$stud["status"] = "0";
