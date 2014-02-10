@@ -7,6 +7,9 @@ require_once '../dbmngt/queries.php';
 date_default_timezone_set('Europe/Paris');
 header('Content-type: application/json');
 
+$available_services = array (
+	"presencefac" => "g5z8h6svaz4g8wcl7861"
+);
 
 //$prof = $_GET['prof'];
 $prof = $_POST['prof'];
