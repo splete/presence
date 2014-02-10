@@ -282,4 +282,15 @@ function doQueryGetFAFormations($conn) {
   $result = mysql_query($queryString);
   return $result;
 }
+
+function doQueryGetStudentsFromFormation($conn, $formation, $anneeRef) {
+  $queryString = "SELECT etudiant_groupe.etudRef AS etudRef, etudiant.nom AS nom, etudiant.prenom AS prenom
+                  FROM etudiant_groupe 
+                  LEFT JOIN etudiant ON etudiant.etudCle LIKE etudiant_groupe.etudRef
+                  WHERE etudiant_groupe.annee=$anneeRef
+                  AND etudiant_groupe.groupeRef LIKE '%".$formation."%' 
+                  ORDER BY etudiant.nom ASC ";
+  $result = mysql_query($queryString);
+  return $result;
+}
 ?>
