@@ -25,7 +25,7 @@ if (strlen($prof) < 1) {
 
 //$date = $_GET['date'];
 $date = $_POST['date'];
-if (strlen($date) < 1) {
+if (strlen($date) < 10) {
 	$cours = array();
 	$cours["status"] = "0";
 	$cours['prof'] = $prof;

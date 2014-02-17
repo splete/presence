@@ -15,7 +15,7 @@ $available_services = array (
 $formation = $_POST['formation'];
 if (strlen($formation) < 5) {
 	$stud = array();
-	$stud["status"] = "0";
+	$stud['status'] = 0;
 	$stud['formation'] = "undefined";
 	$stud['date'] = "";
 	$stud['students'] = array();
@@ -27,7 +27,7 @@ if (strlen($formation) < 5) {
 $date = $_POST['date'];
 if (strlen($date) < 10) {
 	$stud = array();
-	$stud["status"] = "0";
+	$stud['status'] = 0;
 	$stud['formation'] = $formation;
 	$stud['date'] = "undefined";
 	$stud['students'] = array();
@@ -46,7 +46,7 @@ if ($moisRef < 9) {
 }
 
 $json = array();
-$json["status"] = "1";
+$json["status"] = 1;
 $json["formation"] = $formation;
 $json["date"] = $date;
 $json["students"] = array();
@@ -62,6 +62,7 @@ while($student = mysql_fetch_array($students, MYSQL_ASSOC)) {
 	$stud["etudRef"] = $student["etudRef"];
 	$stud["nom"] = $student["nom"];
 	$stud["prenom"] = $student["prenom"];
+	$stud["present"] = 0;
 	$json["students"][] = $stud;
 }
 
