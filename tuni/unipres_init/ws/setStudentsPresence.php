@@ -27,7 +27,7 @@ $matiereref = $_POST['matiereref'];
 $hdebut = $_POST['hdebut'];
 $hfin = $_POST['hfin'];
 $etudRef = $_POST['etudRef'];
-$presence = $_POST['presence'];
+$present = $_POST['present'];
 
 if (strlen($formation) < 5) {
 	$stud = array();
