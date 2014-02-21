@@ -293,4 +293,37 @@ function doQueryGetStudentsFromFormation($conn, $formation, $anneeRef) {
   $result = mysql_query($queryString);
   return $result;
 }
+
+function doQueryGetPresenceOfStudent($conn, $formation, $etudref, $matiereref, $date, $hdebut, $hfin) {
+  $queryString = "SELECT presencesfac.present
+                  FROM presencesfac
+                  WHERE presencesfac.formation LIKE '$formation'
+                  AND presencesfac.etudRef LIKE '$etudref'
+                  AND presencesfac.matiereRef LIKE '$matiereref'
+                  AND presencesfac.date = date('$date')
+                  AND presencesfac.debut = '$hdebut'
+                  AND presencesfac.fin = '$hfin' ";
+  // print($queryString); die();
+  $result = mysql_query($queryString);
+  return $result;
+}
+
+function doQuerySetStudentsPresence($conn, $formation, $etudRef, $matiereref, $date, $hdebut, $hfin, $present, $update = FALSE) {
+  $queryString = "";
+  if (!$update) {
+    $queryString = "INSERT INTO presencesfac (formation, etudRef, presencesfac.date, debut, fin, matiereRef, present)
+                    VALUES ('$formation', '$etudRef', date('$date'), '$hdebut', '$hfin', '$matiereref', '$present') ";
+    // print($queryString); die();
+  } else {
+    $queryString = "UPDATE presencesfac SET presencesfac.present='$present'
+                    WHERE presencesfac.formation LIKE '$formation'
+                    AND presencesfac.etudRef LIKE '$etudRef'
+                    AND presencesfac.matiereRef LIKE '$matiereref'
+                    AND presencesfac.date = date('$date')
+                    AND presencesfac.debut = '$hdebut'
+                    AND presencesfac.fin = '$hfin' ";
+  }
+  mysql_query($queryString);
+
+}
 ?>

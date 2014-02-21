@@ -11,26 +11,33 @@ $available_services = array (
 	"presencefac" => "g5z8h6svaz4g8wcl7861"
 );
 
-// http://localhost/tuni/unipres_init/ws/studentsOfFormation.php?formation=M2ESERVFA&date=2014-02-06&matiereref=13-m2eservfa-glihm-platine&hdebut=10:30:00&hfin=12:30:00
+// http://localhost/tuni/unipres_init/ws/setStudentsPresence.php?formation=M2ESERVFA&date=2014-02-06&matiereref=13-m2eservfa-glihm-platine&hdebut=10:30:00&hfin=12:30:00&present=P&students=nathanael.martin
 
 // $formation = $_GET['formation'];
 // $date = $_GET['date'];
 // $matiereref = $_GET['matiereref'];
 // $hdebut = $_GET['hdebut'];
 // $hfin = $_GET['hfin'];
+// $students = $_GET['students'];
+// $present = $_GET['present'];
 
 $formation = $_POST['formation'];
 $date = $_POST['date'];
 $matiereref = $_POST['matiereref'];
 $date = $_POST['hdebut'];
 $hfin = $_POST['hfin'];
+$etudRef = $_POST['etudRef'];
+$presence = $_POST['presence'];
 
 if (strlen($formation) < 5) {
 	$stud = array();
 	$stud['status'] = 0;
 	$stud['formation'] = "undefined";
 	$stud['date'] = "";
+	$stud["heure_debut"] = "";
+	$stud["heure_fin"] = "";
 	$stud["matiereref"] = "";
+	$stud['present'] = "";
 	$stud['students'] = array();
 	print(json_encode($stud));
 	die();
@@ -43,6 +50,7 @@ if (strlen($date) < 10) {
 	$stud["heure_debut"] = "";
 	$stud["heure_fin"] = "";
 	$stud["matiereref"] = "";
+	$stud['present'] = "";
 	$stud['students'] = array();
 	print(json_encode($stud));
 	die();
@@ -55,6 +63,7 @@ if (strlen($matiereref) < 1) {
 	$stud["heure_debut"] = "";
 	$stud["heure_fin"] = "";
 	$stud["matiereref"] = "unidefined";
+	$stud['present'] = "";
 	$stud['students'] = array();
 	print(json_encode($stud));
 	die();
@@ -67,6 +76,7 @@ if (strlen($date) < 1) {
 	$stud["heure_debut"] = "";
 	$stud["heure_fin"] = "undefined";
 	$stud["matiereref"] = "";
+	$stud['present'] = "";
 	$stud['students'] = array();
 	print(json_encode($stud));
 	die();
@@ -79,7 +89,35 @@ if (strlen($hfin) < 1) {
 	$stud["heure_debut"] = $hdebut;
 	$stud["heure_fin"] = "";
 	$stud["matiereref"] = $matiereref;
+	$stud['present'] = "";
 	$stud['students'] = array();
+	print(json_encode($stud));
+	die();
+}
+if (strlen($present) < 1) {
+	$stud = array();
+	$stud['status'] = 0;
+	$stud['formation'] = $formation;
+	$stud['date'] = $date;
+	$stud["heure_debut"] = $hdebut;
+	$stud["heure_fin"] = $present;
+	$stud["matiereref"] = $matiereref;
+	$stud['present'] = "undefined";
+	$stud['students'] = array();
+	print(json_encode($stud));
+	die();
+}
+if (strlen($students) < 1) {
+	$stud = array();
+	$stud['status'] = 0;
+	$stud['formation'] = $formation;
+	$stud['date'] = $date;
+	$stud["heure_debut"] = $hdebut;
+	$stud["heure_fin"] = $hsin;
+	$stud["matiereref"] = $matiereref;
+	$stud['present'] = $present;
+	$stud['students'] = array();
+	$stud['students'][] = array("no students");
 	print(json_encode($stud));
 	die();
 }
@@ -100,29 +138,28 @@ $json["date"] = $date;
 $json["heure_debut"] = $hdebut;
 $json["heure_fin"] = $hfin;
 $json["matiereref"] = $matiereref;
+$json['present'] = $present;
 $json["students"] = array();
 
+// On vérifie que l'etudint existe
+// On marque sa presence
+
+$stud = array();
+$stud["etudRef"] = $students;
+$stud["present"] = $present;
+
 $conn=doConnection();
- 	
-$students = doQueryGetStudentsFromFormation($conn, $formation, $anneeRef);
 
-while($student = mysql_fetch_array($students, MYSQL_ASSOC)) {
-	if (strlen($student["etudRef"]) < 1 || strlen($student["nom"]) < 1 || strlen($student["prenom"]) < 1 ) 
-		continue;
-	$stud = array();
-	$stud["etudRef"] = $student["etudRef"];
-	$stud["nom"] = $student["nom"];
-	$stud["prenom"] = $student["prenom"];
-
-	$present = doQueryGetPresenceOfStudent($conn, $formation, $student['etudRef'], $matiereref, $date, $hdebut, $hfin);
-	
-	if ($statePresent = mysql_fetch_array($present, MYSQL_ASSOC)['present'])
-		$stud['present'] = $statePresent;
-	else 
-		$stud["present"] = "U";
-
-	$json["students"][] = $stud;
+$existsInBase = doQueryGetPresenceOfStudent($conn, $formation, $students, $matiereref, $date, $hdebut, $hfin);
+if (mysql_fetch_array($existsInBase, MYSQL_ASSOC)['present']) {
+	$stud["maj"] = 0;
+	doQuerySetStudentsPresence($conn, $formation, $students, $matiereref, $date, $hdebut, $hfin, $present, TRUE);
+} else {
+	$stud["maj"] = 1;
+	doQuerySetStudentsPresence($conn, $formation, $students, $matiereref, $date, $hdebut, $hfin, $present);
 }
 
+$json["students"][] = $stud;
+
+
 print(json_encode($json));
-?>
