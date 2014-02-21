@@ -22,7 +22,7 @@ $available_services = array (
 $formation = $_POST['formation'];
 $date = $_POST['date'];
 $matiereref = $_POST['matiereref'];
-$date = $_POST['hdebut'];
+$hdebut = $_POST['hdebut'];
 $hfin = $_POST['hfin'];
 
 if (strlen($formation) < 5) {
