@@ -27,6 +27,7 @@ $matiereref = $_POST['matiereref'];
 $hdebut = $_POST['hdebut'];
 $hfin = $_POST['hfin'];
 $etudRef = $_POST['etudRef'];
+$students = $_POST['students'];
 $present = $_POST['present'];
 
 if (strlen($formation) < 5) {
@@ -113,7 +114,7 @@ if (strlen($students) < 1) {
 	$stud['formation'] = $formation;
 	$stud['date'] = $date;
 	$stud["heure_debut"] = $hdebut;
-	$stud["heure_fin"] = $hsin;
+	$stud["heure_fin"] = $hfin;
 	$stud["matiereref"] = $matiereref;
 	$stud['present'] = $present;
 	$stud['students'] = array();
