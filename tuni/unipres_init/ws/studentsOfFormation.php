@@ -13,17 +13,17 @@ $available_services = array (
 
 // http://localhost/tuni/unipres_init/ws/studentsOfFormation.php?formation=M2ESERVFA&date=2014-02-06&matiereref=13-m2eservfa-glihm-platine&hdebut=10:30:00&hfin=12:30:00
 
-// $formation = $_GET['formation'];
-// $date = $_GET['date'];
-// $matiereref = $_GET['matiereref'];
-// $hdebut = $_GET['hdebut'];
-// $hfin = $_GET['hfin'];
+$formation = $_GET['formation'];
+$date = $_GET['date'];
+$matiereref = $_GET['matiereref'];
+$hdebut = $_GET['hdebut'];
+$hfin = $_GET['hfin'];
 
-$formation = $_POST['formation'];
-$date = $_POST['date'];
-$matiereref = $_POST['matiereref'];
-$hdebut = $_POST['hdebut'];
-$hfin = $_POST['hfin'];
+// $formation = $_POST['formation'];
+// $date = $_POST['date'];
+// $matiereref = $_POST['matiereref'];
+// $hdebut = $_POST['hdebut'];
+// $hfin = $_POST['hfin'];
 
 if (strlen($formation) < 5) {
 	$stud = array();
@@ -106,8 +106,6 @@ $conn=doConnection();
  	
 $students = doQueryGetStudentsFromFormation($conn, $formation, $anneeRef);
 
-error_reporting(0);
-
 while($student = mysql_fetch_array($students, MYSQL_ASSOC)) {
 	if (strlen($student["etudRef"]) < 1 || strlen($student["nom"]) < 1 || strlen($student["prenom"]) < 1 ) 
 		continue;
@@ -118,8 +116,7 @@ while($student = mysql_fetch_array($students, MYSQL_ASSOC)) {
 
 	$present = doQueryGetPresenceOfStudent($conn, $formation, $student['etudRef'], $matiereref, $date, $hdebut, $hfin);
 	
-	$statePresent = mysql_fetch_array($present, MYSQL_ASSOC);
-	if (mysql_num_rows($statePresent) > 0)
+	if ($statePresent = mysql_fetch_array($present, MYSQL_ASSOC))
 		$stud['present'] = $statePresent['present'];
 	else 
 		$stud["present"] = "U";
