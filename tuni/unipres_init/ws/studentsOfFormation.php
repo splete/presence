@@ -106,6 +106,8 @@ $conn=doConnection();
  	
 $students = doQueryGetStudentsFromFormation($conn, $formation, $anneeRef);
 
+error_reporting(0);
+
 while($student = mysql_fetch_array($students, MYSQL_ASSOC)) {
 	if (strlen($student["etudRef"]) < 1 || strlen($student["nom"]) < 1 || strlen($student["prenom"]) < 1 ) 
 		continue;
