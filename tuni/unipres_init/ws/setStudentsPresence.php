@@ -100,7 +100,7 @@ if (strlen($present) < 1) {
 	$stud['formation'] = $formation;
 	$stud['date'] = $date;
 	$stud["heure_debut"] = $hdebut;
-	$stud["heure_fin"] = $present;
+	$stud["heure_fin"] = $hfin;
 	$stud["matiereref"] = $matiereref;
 	$stud['present'] = "undefined";
 	$stud['students'] = array();
