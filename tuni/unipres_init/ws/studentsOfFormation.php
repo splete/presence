@@ -13,17 +13,17 @@ $available_services = array (
 
 // http://localhost/tuni/unipres_init/ws/studentsOfFormation.php?formation=M2ESERVFA&date=2014-02-06&matiereref=13-m2eservfa-glihm-platine&hdebut=10:30:00&hfin=12:30:00
 
-$formation = $_GET['formation'];
-$date = $_GET['date'];
-$matiereref = $_GET['matiereref'];
-$hdebut = $_GET['hdebut'];
-$hfin = $_GET['hfin'];
+// $formation = $_GET['formation'];
+// $date = $_GET['date'];
+// $matiereref = $_GET['matiereref'];
+// $hdebut = $_GET['hdebut'];
+// $hfin = $_GET['hfin'];
 
-// $formation = $_POST['formation'];
-// $date = $_POST['date'];
-// $matiereref = $_POST['matiereref'];
-// $hdebut = $_POST['hdebut'];
-// $hfin = $_POST['hfin'];
+$formation = $_POST['formation'];
+$date = $_POST['date'];
+$matiereref = $_POST['matiereref'];
+$hdebut = $_POST['hdebut'];
+$hfin = $_POST['hfin'];
 
 if (strlen($formation) < 5) {
 	$stud = array();

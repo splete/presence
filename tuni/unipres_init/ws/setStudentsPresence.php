@@ -151,7 +151,7 @@ $stud["present"] = $present;
 $conn=doConnection();
 
 $existsInBase = doQueryGetPresenceOfStudent($conn, $formation, $students, $matiereref, $date, $hdebut, $hfin);
-if (mysql_fetch_array($existsInBase, MYSQL_ASSOC)['present']) {
+if (isset($existsInBase) && $existsInBase != '' && mysql_fetch_array($existsInBase, MYSQL_ASSOC)['present']) {
 	$stud["maj"] = 0;
 	doQuerySetStudentsPresence($conn, $formation, $students, $matiereref, $date, $hdebut, $hfin, $present, TRUE);
 } else {
