@@ -116,7 +116,7 @@ while($student = mysql_fetch_array($students, MYSQL_ASSOC)) {
 
 	$present = doQueryGetPresenceOfStudent($conn, $formation, $student['etudRef'], $matiereref, $date, $hdebut, $hfin);
 	
-	if ($statePresent = mysql_fetch_array($present, MYSQL_ASSOC))
+	if (isset($present) && $present != '' && $statePresent = mysql_fetch_array($present, MYSQL_ASSOC))
 		$stud['present'] = $statePresent['present'];
 	else 
 		$stud["present"] = "U";
