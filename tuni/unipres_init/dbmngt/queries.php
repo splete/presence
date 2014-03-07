@@ -326,4 +326,49 @@ function doQuerySetStudentsPresence($conn, $formation, $etudRef, $matiereref, $d
   mysql_query($queryString);
 
 }
+
+function doQueryGetExamens($conn, $date){
+  $queryString = "SELECT examens.exam_ref, examens.date, examens.heure_debut, examens.heure_fin, examens_matiere.matiere_ref, matiere.nom, matiere.formationRef
+                  FROM examens
+                  LEFT JOIN examens_matiere ON examens.exam_ref = examens_matiere.exam_ref
+                  LEFT JOIN matiere ON matiere.matiereCle = examens_matiere.matiere_ref
+                  WHERE examens.date = date('$date') ";  
+  $result=mysql_query($queryString,$conn);
+  return $result;
+}
+
+function doQueryGetPresenceOfStudentInExam($conn, $formation, $etudref, $examen, $date, $hdebut, $hfin) {
+  $queryString = "SELECT presences_examens.present_entree, presences_examens.present_sortie
+                  FROM presences_examens
+                  WHERE presences_examens.formation LIKE '$formation'
+                  AND presences_examens.etudRef LIKE '$etudref'
+                  AND presences_examens.exam_ref LIKE '$examen'
+                  AND presences_examens.date = date('$date')
+                  AND presences_examens.debut = '$hdebut'
+                  AND presences_examens.fin = '$hfin' ";
+  // print($queryString); die();
+  $result = mysql_query($queryString);
+  return $result;
+}
+
+function doQuerySetStudentsPresenceInExam($conn, $formation, $etudRef, $examen, $date, $hdebut, $hfin, $present, $type, $update = FALSE) {
+  $queryString = "";
+  if (!$update) {
+    $queryString = "INSERT INTO presences_examens (formation, etudRef, presences_examens.date, debut, fin, exam_ref, present_$type)
+                    VALUES ('$formation', '$etudRef', date('$date'), '$hdebut', '$hfin', '$examen', '$present') ";
+    // print($queryString); die();
+  } else {
+    $queryString = "UPDATE presences_examens SET presences_examens.present_$type='$present'
+                    WHERE presences_examens.formation LIKE '$formation'
+                    AND presences_examens.etudRef LIKE '$etudRef'
+                    AND presences_examens.exam_ref LIKE '$examen'
+                    AND presences_examens.date = date('$date')
+                    AND presences_examens.debut = '$hdebut'
+                    AND presences_examens.fin = '$hfin' ";
+  }
+  // die($queryString);
+  mysql_query($queryString);
+
+}
+
 ?>
